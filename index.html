@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Procure Jeiel Miranda para fazer instalação do Linux no seu Windows 10/11!">
+    <meta name="keywords" content="instalação, sistema operacional, linux, windows 10, windows 11, formatação, fim do windows 10">
+    <meta name="author" content="Jeiel Miranda">
+    <meta name="robots" content="index, follow">
+    <title>Jeiel Lima Miranda - Instalação Linux</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --windows-blue: #0078d4;
+            --windows-light-blue: #106ebe;
+            --windows-accent: #005a9e;
+            --windows-bg: #f3f3f3;
+            --windows-card: #ffffff;
+            --windows-border: #e1e1e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, var(--windows-bg) 0%, #e8f4fd 100%);
+            min-height: 100vh;
+        }
+
+        .hero-section {
+            background: linear-gradient(135deg, var(--windows-blue) 0%, var(--windows-light-blue) 100%);
+            color: white;
+            padding: 4rem 0;
+            border-radius: 0 0 2rem 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 120, 212, 0.3);
+        }
+
+        .card {
+            border: 1px solid var(--windows-border);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            background: var(--windows-card);
+            transition: all 0.3s ease;
+            margin-bottom: 1.5rem;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 120, 212, 0.2);
+        }
+
+        .btn-primary {
+            background: var(--windows-blue);
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background: var(--windows-accent);
+            transform: translateY(-2px);
+        }
+
+        .btn-success {
+            background: #107c10;
+            border: none;
+            border-radius: 6px;
+            padding: 12px 24px;
+            font-weight: 600;
+        }
+
+        .price-card {
+            background: linear-gradient(135deg, #f8f9ff 0%, #e8f4fd 100%);
+            border-left: 4px solid var(--windows-blue);
+        }
+
+        .contact-section {
+            background: var(--windows-blue);
+            color: white;
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .icon-feature {
+            color: var(--windows-blue);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .calculator-section {
+            background: linear-gradient(135deg, #fff 0%, #f8f9ff 100%);
+            border: 2px solid var(--windows-blue);
+            border-radius: 12px;
+            padding: 2rem;
+        }
+
+        .form-control {
+            border-radius: 6px;
+            border: 2px solid var(--windows-border);
+            padding: 12px;
+        }
+
+        .form-control:focus {
+            border-color: var(--windows-blue);
+            box-shadow: 0 0 0 0.2rem rgba(0, 120, 212, 0.25);
+        }
+
+        .countdown {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 12px;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 300px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold mb-3">
+                        <i class="fab fa-linux me-3"></i>
+                        Adeus Windows 10!
+                    </h1>
+                    <p class="lead mb-4">
+                        Migre para Linux antes do fim do suporte do Windows 10 (25 de outubro de 2025).
+                        Instalação profissional com Jeiel Lima Miranda.
+                    </p>
+                    <a href="#contato" class="btn btn-light btn-lg me-3">
+                        <i class="fas fa-phone me-2"></i>Entre em Contato
+                    </a>
+                    <a href="#calculadora" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-calculator me-2"></i>Calcular Preço
+                    </a>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <i class="fab fa-linux" style="font-size: 8rem; opacity: 0.3;"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Countdown -->
+        <div class="countdown">
+            <h4><i class="fas fa-clock me-2"></i>Fim do Windows 10 em:</h4>
+            <div id="countdown" class="fs-3 fw-bold mt-2"></div>
+        </div>
+
+        <!-- Services -->
+        <div class="row mb-5">
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <i class="fas fa-home icon-feature"></i>
+                    <h5>Em Casa</h5>
+                    <p class="text-muted">Faço instalação em minha casa.</p>
+                    <h3 class="text-primary">R$ 100</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <i class="fas fa-car icon-feature"></i>
+                    <h5>Ananindeua</h5>
+                    <p class="text-muted">Vou até você em Ananindeua</p>
+                    <h3 class="text-primary">R$ 150</h3>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="card h-100 text-center p-4">
+                    <i class="fas fa-city icon-feature"></i>
+                    <h5>Belém</h5>
+                    <p class="text-muted">Vou até você em Belém</p>
+                    <h3 class="text-primary">R$ 200</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Calculadora de Preço -->
+        <div id="calculadora" class="calculator-section mb-5">
+            <h3 class="text-center mb-4">
+                <i class="fas fa-calculator me-2"></i>Calculadora de Preço
+            </h3>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Tipo de Atendimento:</label>
+                        <select class="form-control" id="serviceType">
+                            <option value="100">Em Casa - R$ 100</option>
+                            <option value="150">Ananindeua - R$ 150</option>
+                            <option value="200">Belém - R$ 200</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold">Distância (km):</label>
+                        <input type="number" class="form-control" id="distance" placeholder="Digite a distância em km" min="0" step="0.1">
+                        <small class="text-muted">Taxa: R$ 50 por km adicional</small>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="price-card card p-4">
+                        <h5>Resumo do Orçamento:</h5>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Serviço:</span>
+                            <span id="servicePrice">R$ 100</span>
+                        </div>
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Taxa por km:</span>
+                            <span id="kmPrice">R$ 0</span>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-between fs-4 fw-bold text-primary">
+                            <span>Total:</span>
+                            <span id="totalPrice">R$ 100</span>
+                        </div>
+                        <button class="btn btn-success w-100 mt-3" onclick="contactWhatsApp()">
+                            <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div id="contato" class="contact-section mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-8">
+                    <h3 class="mb-3">
+                        <i class="fas fa-user me-2"></i>Jeiel Lima Miranda
+                    </h3>
+                    <p class="mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        <strong>WhatsApp:</strong> (91) 98854-4585
+                    </p>
+                    <p class="mb-2">
+                        <i class="fas fa-globe me-2"></i>
+                        <strong>Website:</strong> 
+                        <a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
+                            jeielmiranda.is-a.dev
+                        </a>
+                    </p>
+                    <p class="mb-0">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        <strong>Endereço:</strong> Rua Raimundo Oliveira, CEP: 67030-163
+                    </p>
+                </div>
+                <div class="col-md-4 text-center">
+                    <a href="https://wa.me/5591988544585" class="btn btn-success btn-lg">
+                        <i class="fab fa-whatsapp me-2"></i>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">
+                    <i class="fas fa-map me-2"></i>Localização
+                </h5>
+            </div>
+            <div class="card-body p-0">
+                <div class="map-container">
+                    <iframe 
+                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.988,-9.805,-46.059,2.308&layer=mapnik&marker=-1.3508141,-48.3743022"
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center py-4 mt-5" style="background: var(--windows-blue); color: white;">
+        <p class="mb-0">&copy; Página criada desde de 2025</p> <p><a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
+                            Quem é Jeiel Lima Miranda?
+      </a></p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Countdown Timer
+        function updateCountdown() {
+            const targetDate = new Date('2025-10-25T00:00:00');
+            const now = new Date();
+            const difference = targetDate - now;
+
+            if (difference > 0) {
+                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+                document.getElementById('countdown').innerHTML = 
+                    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                document.getElementById('countdown').innerHTML = 'Tempo Esgotado!';
+            }
+        }
+
+        setInterval(updateCountdown, 1000);
+        updateCountdown();
+
+        // Price Calculator
+        function updatePrice() {
+            const serviceType = document.getElementById('serviceType').value;
+            const distance = parseFloat(document.getElementById('distance').value) || 0;
+            
+            const servicePrice = parseInt(serviceType);
+            const kmPrice = distance * 50;
+            const totalPrice = servicePrice + kmPrice;
+
+            document.getElementById('servicePrice').textContent = `R$ ${servicePrice}`;
+            document.getElementById('kmPrice').textContent = `R$ ${kmPrice}`;
+            document.getElementById('totalPrice').textContent = `R$ ${totalPrice}`;
+        }
+
+        document.getElementById('serviceType').addEventListener('change', updatePrice);
+        document.getElementById('distance').addEventListener('input', updatePrice);
+
+        // WhatsApp Contact
+        function contactWhatsApp() {
+            const serviceType = document.getElementById('serviceType');
+            const distance = parseFloat(document.getElementById('distance').value) || 0;
+            const totalPrice = document.getElementById('totalPrice').textContent;
+            
+            const serviceText = serviceType.options[serviceType.selectedIndex].text;
+            
+            const message = `Olá Jeiel! 👋
+
+Gostaria de solicitar um orçamento para instalação do Linux:
+
+🔧 Serviço: ${serviceText}
+📍 Distância: ${distance}km
+💰 Valor Total: ${totalPrice}
+
+Aguardo seu contato!`;
+
+            const encodedMessage = encodeURIComponent(message);
+            window.open(`https://wa.me/5591988544585?text=${encodedMessage}`, '_blank');
+        }
+
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
