@@ -141,9 +141,6 @@
                     <a href="#contato" class="btn btn-light btn-lg me-3">
                         <i class="fas fa-phone me-2"></i>Entre em Contato
                     </a>
-                    <a href="#calculadora" class="btn btn-outline-light btn-lg">
-                        <i class="fas fa-calculator me-2"></i>Calcular Preço
-                    </a>
                 </div>
                 <div class="col-lg-4 text-center">
                     <i class="fab fa-linux" style="font-size: 8rem; opacity: 0.3;"></i>
@@ -183,51 +180,6 @@
                     <h5>Belém</h5>
                     <p class="text-muted">Vou até você em Belém</p>
                     <h3 class="text-primary">R$ 200</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- Calculadora de Preço -->
-        <div id="calculadora" class="calculator-section mb-5">
-            <h3 class="text-center mb-4">
-                <i class="fas fa-calculator me-2"></i>Calculadora de Preço
-            </h3>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="mb-3">
-                        <label class="form-label fw-bold">Tipo de Atendimento:</label>
-                        <select class="form-control" id="serviceType">
-                            <option value="100">Em Casa - R$ 100</option>
-                            <option value="150">Ananindeua - R$ 150</option>
-                            <option value="200">Belém - R$ 200</option>
-                        </select>
-                    </div>
-                    <div class="mb-3">
-                        <label class="form-label fw-bold">Distância (km):</label>
-                        <input type="number" class="form-control" id="distance" placeholder="Digite a distância em km" min="0" step="0.1">
-                        <small class="text-muted">Taxa: R$ 50 por km adicional</small>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="price-card card p-4">
-                        <h5>Resumo do Orçamento:</h5>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Serviço:</span>
-                            <span id="servicePrice">R$ 100</span>
-                        </div>
-                        <div class="d-flex justify-content-between mb-2">
-                            <span>Taxa por km:</span>
-                            <span id="kmPrice">R$ 0</span>
-                        </div>
-                        <hr>
-                        <div class="d-flex justify-content-between fs-4 fw-bold text-primary">
-                            <span>Total:</span>
-                            <span id="totalPrice">R$ 100</span>
-                        </div>
-                        <button class="btn btn-success w-100 mt-3" onclick="contactWhatsApp()">
-                            <i class="fab fa-whatsapp me-2"></i>Solicitar Orçamento
-                        </button>
-                    </div>
                 </div>
             </div>
         </div>
@@ -317,45 +269,6 @@
         setInterval(updateCountdown, 1000);
         updateCountdown();
 
-        // Price Calculator
-        function updatePrice() {
-            const serviceType = document.getElementById('serviceType').value;
-            const distance = parseFloat(document.getElementById('distance').value) || 0;
-            
-            const servicePrice = parseInt(serviceType);
-            const kmPrice = distance * 50;
-            const totalPrice = servicePrice + kmPrice;
-
-            document.getElementById('servicePrice').textContent = `R$ ${servicePrice}`;
-            document.getElementById('kmPrice').textContent = `R$ ${kmPrice}`;
-            document.getElementById('totalPrice').textContent = `R$ ${totalPrice}`;
-        }
-
-        document.getElementById('serviceType').addEventListener('change', updatePrice);
-        document.getElementById('distance').addEventListener('input', updatePrice);
-
-        // WhatsApp Contact
-        function contactWhatsApp() {
-            const serviceType = document.getElementById('serviceType');
-            const distance = parseFloat(document.getElementById('distance').value) || 0;
-            const totalPrice = document.getElementById('totalPrice').textContent;
-            
-            const serviceText = serviceType.options[serviceType.selectedIndex].text;
-            
-            const message = `Olá Jeiel! 👋
-
-Gostaria de solicitar um orçamento para instalação do Linux:
-
-🔧 Serviço: ${serviceText}
-📍 Distância: ${distance}km
-💰 Valor Total: ${totalPrice}
-
-Aguardo seu contato!`;
-
-            const encodedMessage = encodeURIComponent(message);
-            window.open(`https://wa.me/5591988544585?text=${encodedMessage}`, '_blank');
-        }
-
         // Smooth Scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -372,3 +285,4 @@ Aguardo seu contato!`;
     </script>
 </body>
 </html>
+
