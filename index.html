@@ -10,6 +10,7 @@
     <title>Jeiel Lima Miranda - Instalação Linux</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
     <style>
         :root {
             --windows-blue: #0078d4;
@@ -125,125 +126,141 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
-    <div class="hero-section">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold mb-3">
-                        <i class="fab fa-linux me-3"></i>
-                        Adeus Windows 10!
-                    </h1>
-                    <p class="lead mb-4">
-                        Migre para Linux antes do fim do suporte do Windows 10 (25 de outubro de 2025).
-                        Instalação profissional com Jeiel Lima Miranda.
-                    </p>
-                    <a href="#contato" class="btn btn-light btn-lg me-3">
-                        <i class="fas fa-phone me-2"></i>Entre em Contato
-                    </a>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <i class="fab fa-linux" style="font-size: 8rem; opacity: 0.3;"></i>
-                </div>
-            </div>
-        </div>
+    <!-- Mensagem de carregamento -->
+    <div id="loadingMessage" class="loading-message">
+        A carregar conteúdo...
     </div>
 
-    <div class="container">
-        <!-- Countdown -->
-        <div class="countdown">
-            <h4><i class="fas fa-clock me-2"></i>Fim do Windows 10 em:</h4>
-            <div id="countdown" class="fs-3 fw-bold mt-2"></div>
-        </div>
-
-        <!-- Services -->
-        <div class="row mb-5">
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center p-4">
-                    <i class="fas fa-home icon-feature"></i>
-                    <h5>Em Casa</h5>
-                    <p class="text-muted">Faço instalação em minha casa.</p>
-                    <h3 class="text-primary">R$ 100</h3>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center p-4">
-                    <i class="fas fa-car icon-feature"></i>
-                    <h5>Ananindeua</h5>
-                    <p class="text-muted">Vou até você em Ananindeua</p>
-                    <h3 class="text-primary">R$ 150</h3>
-                </div>
-            </div>
-            <div class="col-md-4 mb-4">
-                <div class="card h-100 text-center p-4">
-                    <i class="fas fa-city icon-feature"></i>
-                    <h5>Belém</h5>
-                    <p class="text-muted">Vou até você em Belém</p>
-                    <h3 class="text-primary">R$ 200</h3>
-                </div>
-            </div>
-        </div>
-
-        <!-- Contact Section -->
-        <div id="contato" class="contact-section mb-5">
-            <div class="row align-items-center">
-                <div class="col-md-8">
-                    <h3 class="mb-3">
-                        <i class="fas fa-user me-2"></i>Jeiel Lima Miranda
-                    </h3>
-                    <p class="mb-2">
-                        <i class="fas fa-phone me-2"></i>
-                        <strong>WhatsApp:</strong> (91) 98854-4585
-                    </p>
-                    <p class="mb-2">
-                        <i class="fas fa-globe me-2"></i>
-                        <strong>Website:</strong> 
-                        <a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
-                            jeielmiranda.is-a.dev
+    <!-- Conteúdo principal do site -->
+    <div id="siteContent" class="content-wrapper">
+        <!-- Hero Section -->
+        <div class="hero-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+                        <h1 class="display-4 fw-bold mb-3">
+                            <i class="fab fa-linux me-3"></i>
+                            Adeus Windows 10!
+                        </h1>
+                        <p class="lead mb-4">
+                            Migre para Linux antes do fim do suporte do Windows 10 (25 de outubro de 2025).
+                            Instalação profissional com Jeiel Lima Miranda.
+                        </p>
+                        <a href="#contato" class="btn btn-light btn-lg me-3">
+                            <i class="fas fa-phone me-2"></i>Entre em Contato
                         </a>
-                    </p>
-                    <p class="mb-0">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        <strong>Endereço:</strong> Rua Raimundo Oliveira, CEP: 67030-163
-                    </p>
-                </div>
-                <div class="col-md-4 text-center">
-                    <a href="https://wa.me/5591988544585" class="btn btn-success btn-lg">
-                        <i class="fab fa-whatsapp me-2"></i>
-                        Falar no WhatsApp
-                    </a>
+                    </div>
+                    <div class="col-lg-4 text-center">
+                        <i class="fab fa-linux" style="font-size: 8rem; opacity: 0.3;"></i>
+                    </div>
                 </div>
             </div>
         </div>
 
-        <!-- Map Section -->
-        <div class="card">
-            <div class="card-header">
-                <h5 class="mb-0">
-                    <i class="fas fa-map me-2"></i>Localização
-                </h5>
+        <div class="container">
+            <!-- Countdown -->
+            <div class="countdown">
+                <h4><i class="fas fa-clock me-2"></i>Fim do Windows 10 em:</h4>
+                <div id="countdown" class="fs-3 fw-bold mt-2"></div>
             </div>
-            <div class="card-body p-0">
-                <div class="map-container">
-                    <iframe 
-                        src="https://www.openstreetmap.org/export/embed.html?bbox=-58.988,-9.805,-46.059,2.308&layer=mapnik&marker=-1.3508141,-48.3743022"
-                        width="100%" 
-                        height="300" 
-                        style="border:0;" 
-                        allowfullscreen="" 
-                        loading="lazy">
-                    </iframe>
+
+            <!-- Services -->
+            <div class="row mb-5">
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-home icon-feature"></i>
+                        <h5>Em Casa</h5>
+                        <p class="text-muted">Faço instalação em minha casa.</p>
+                        <h3 class="text-primary">R$ 100</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-car icon-feature"></i>
+                        <h5>Ananindeua</h5>
+                        <p class="text-muted">Vou até você em Ananindeua</p>
+                        <h3 class="text-primary">R$ 150</h3>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card h-100 text-center p-4">
+                        <i class="fas fa-city icon-feature"></i>
+                        <h5>Belém</h5>
+                        <p class="text-muted">Vou até você em Belém</p>
+                        <h3 class="text-primary">R$ 200</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Section -->
+            <div id="contato" class="contact-section mb-5">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="mb-3">
+                            <i class="fas fa-user me-2"></i>Jeiel Lima Miranda
+                        </h3>
+                        <p class="mb-2">
+                            <i class="fas fa-phone me-2"></i>
+                            <strong>WhatsApp:</strong> (91) 98854-4585
+                        </p>
+                        <p class="mb-2">
+                            <i class="fas fa-globe me-2"></i>
+                            <strong>Website:</strong> 
+                            <a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
+                                jeielmiranda.is-a.dev
+                            </a>
+                        </p>
+                        <p class="mb-0">
+                            <i class="fas fa-map-marker-alt me-2"></i>
+                            <strong>Endereço:</strong> Rua Raimundo Oliveira, CEP: 67030-163
+                        </p>
+                    </div>
+                    <div class="col-md-4 text-center">
+                        <a href="https://wa.me/5591988544585" class="btn btn-success btn-lg">
+                            <i class="fab fa-whatsapp me-2"></i>
+                            Falar no WhatsApp
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map Section -->
+            <div class="card">
+                <div class="card-header">
+                    <h5 class="mb-0">
+                        <i class="fas fa-map me-2"></i>Localização
+                    </h5>
+                </div>
+                <div class="card-body p-0">
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.openstreetmap.org/export/embed.html?bbox=-58.988,-9.805,-46.059,2.308&layer=mapnik&marker=-1.3508141,-48.3743022"
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <footer class="text-center py-4 mt-5" style="background: var(--windows-blue); color: white;">
+            <p class="mb-0">&copy; Página criada desde de 2025</p> <p><a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
+                                Quem é Jeiel Lima Miranda?
+          </a></p>
+        </footer>
     </div>
 
-    <!-- Footer -->
-    <footer class="text-center py-4 mt-5" style="background: var(--windows-blue); color: white;">
-        <p class="mb-0">&copy; Página criada desde de 2025</p> <p><a href="https://jeielmiranda.is-a.dev" class="text-white" target="_blank">
-                            Quem é Jeiel Lima Miranda?
-      </a></p>
-    </footer>
+    <!-- Diálogo de acesso negado -->
+    <div id="accessDeniedDialog" class="dialog-overlay">
+        <div class="dialog-box">
+            <h2>Acesso Indisponível</h2>
+            <p>Lamentamos, mas o conteúdo deste site não está disponível na sua região.</p>
+        </div>
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
     <script>
@@ -283,6 +300,6 @@
             });
         });
     </script>
+    <script src="script.js"></script>
 </body>
 </html>
-
